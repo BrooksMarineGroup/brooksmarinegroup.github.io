@@ -28,6 +28,7 @@ function introAnimation() {
 	faders = [logo, motto, enterLink];
 
 	$.each(faders, function(index, value) {
+		console.log(value.height() + ' ' + value.width());
 		value.css('position', 'fixed');
 		value.css('left', '50%');
 		value.css('top', '50%');
