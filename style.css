@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 25px;
+  border-bottom: 1px solid #CACACA;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+#sidebar {
+
+}
+
+#contentwrapper {
+  margin: 0 50px;
+  width: calc(100% - 50px*2);
+}
+
+footer {
+  border-top: 1px solid #CACACA;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* ==== ====  */
+
+#BMG-logo {
+  display: none;
+}
+
+#BMG-motto {
+  display: none;
+}
+
+#BMG-enter {
+  display: none;
+  cursor: pointer;
+}
