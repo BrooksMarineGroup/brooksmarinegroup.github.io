@@ -73,3 +73,7 @@ footer {
   width: 20%;
   min-height: 400px;
 }
+
+#column3 {
+  justify-content: center;
+}
