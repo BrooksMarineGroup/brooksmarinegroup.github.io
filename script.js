@@ -40,7 +40,7 @@ function introAnimation() {
 	enterLink.delay(3000).fadeIn(1000);
 
 	enterLink.click(function() {
-		$('body *').fadeIn(500);
+		$('body *:not(.intro-img)').fadeIn(500);
 		$.each(faders, function(index, value) {
 			value.removeAttr('style');
 		});
