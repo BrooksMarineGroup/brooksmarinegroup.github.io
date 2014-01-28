@@ -1,5 +1,18 @@
 $(function() {
-	introAnimation();
+	var loadedImages = [];
+	var allLoaded = false;
+
+	$('.intro-img').load(function() {
+		if ( $.inArray(this, loadedImages) == -1 ) {
+			loadedImages.push(this);
+		}
+		if (loadedImages.length >= 3 && !allLoaded) {
+			allLoaded = true;
+			introAnimation();
+		}
+	}).each(function() {
+		if (this.complete) $(this).load();
+	});
 });
 
 function introAnimation() {
@@ -22,18 +35,12 @@ function introAnimation() {
 		value.css('margin-top', '-' + value.height()/2 + 'px');
 	});
 
-	// motto.css('position', 'fixed');
-	// motto.css('left', '50%');
-	// motto.css('top', '50%');
-	// motto.css('margin-left', '-' + motto.width()/2 + 'px');
-	// motto.css('margin-top', '-' + motto.height()/2 + 'px');
-
 	logo.fadeIn(1000).fadeOut(500);
 	motto.delay(1500).fadeIn(1000).fadeOut(500);
 	enterLink.delay(3000).fadeIn(1000);
 
 	enterLink.click(function() {
-		$('body *').show();
+		$('body *').fadeIn(500);
 		$.each(faders, function(index, value) {
 			value.removeAttr('style');
 		});
