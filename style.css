@@ -20,8 +20,14 @@ header {
 }
 
 #contentwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /*align-items: center;*/
   margin: 0 50px;
   width: calc(100% - 50px*2);
+  background-color: #DDDDDD;
+  height: 700px;
 }
 
 footer {
@@ -34,15 +40,36 @@ footer {
 
 /* ==== ====  */
 
-#BMG-logo {
+.intro-img {
   display: none;
 }
 
+#BMG-logo {
+  height: 50%;
+  width: auto;
+}
+
 #BMG-motto {
-  display: none;
 }
 
 #BMG-enter {
   display: none;
   cursor: pointer;
+  font-size: 40px;
+  text-align: center;
+}
+
+.logoimage {
+  width: 130px;
+  height: auto;
+}
+
+.logo-column {
+          display: inline-flex;
+  -webkit-display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  min-height: 400px;
 }

@@ -1,4 +1,6 @@
 $(function() {
+	$('body *').hide(); // Hide site before the intro.
+
 	var loadedImages = [];
 	var allLoaded = false;
 
@@ -6,7 +8,7 @@ $(function() {
 		if ( $.inArray(this, loadedImages) == -1 ) {
 			loadedImages.push(this);
 		}
-		if (loadedImages.length >= 3 && !allLoaded) {
+		if (loadedImages.length >= 2 && !allLoaded) {
 			allLoaded = true;
 			introAnimation();
 		}
@@ -16,8 +18,6 @@ $(function() {
 });
 
 function introAnimation() {
-	$('body *').hide();
-
 	var logo = $('#BMG-logo');
 	var motto = $('#BMG-motto');
 	var enterLink = $('#BMG-enter');
@@ -38,9 +38,10 @@ function introAnimation() {
 	logo.fadeIn(1000).fadeOut(500);
 	motto.delay(1500).fadeIn(1000).fadeOut(500);
 	enterLink.delay(3000).fadeIn(1000);
+	// enterLink.fadeIn(1000);
 
 	enterLink.click(function() {
-		$('body *:not(.intro-img)').fadeIn(500);
+		$('body *:not(.intro-img)').fadeIn(500).removeAttr('style');
 		$.each(faders, function(index, value) {
 			value.removeAttr('style');
 		});
