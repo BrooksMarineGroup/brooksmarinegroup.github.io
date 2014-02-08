@@ -1,5 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 
+@color: #FFFFFF;
+
+.display-flex {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex; 
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -15,21 +25,6 @@ header {
   padding-top: 10px;
 }
 
-#sidebar {
-
-}
-
-#contentwrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  /*align-items: center;*/
-  margin: 0 50px;
-  width: calc(~"100% - 50px*2");
-  background-color: #DDDDDD;
-  height: 700px;
-}
-
 footer {
   border-top: 1px solid #CACACA;
   margin-top: 20px;
@@ -40,8 +35,11 @@ footer {
 
 /* ==== ====  */
 
-.intro-img {
+.intro-splash {
   display: none;
+}
+
+.intro-img {
 }
 
 #BMG-logo {
@@ -51,15 +49,26 @@ footer {
 }
 
 #BMG-enter {
-  display: none;
   cursor: pointer;
   font-size: 40px;
   text-align: center;
 }
 
-.logoimage {
-  width: 130px;
-  height: auto;
+#contentwrapper {
+  .display-flex;
+  background-image: url('../images/background.gif');
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 50px;
+  width: calc(~"100% - 50px*2");
+  height: 700px;
+}
+
+.logo-column {
+  .logoimage {
+    width: 130px;
+    height: auto;
+  }
 }
 
 .logo-column {
