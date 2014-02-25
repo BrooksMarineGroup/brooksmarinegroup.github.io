@@ -1,2 +1,9 @@
 # OSX Files
 *.DS_Store
+
+# Jekyll folders and files
+.ruby-version
+_site
+_config.yml
+_layouts
+_posts

@@ -1,6 +1,6 @@
-$.fn.visibilityFadeIn = function(time) {
-	$(this).css({opacity: 0.0, visibility: 'visible'}).animate({opacity: 1.0}, time);
-}
+// $.fn.visibilityFadeIn = function(time) {
+// 	$(this).css({opacity: 0.0, visibility: 'visible'}).animate({opacity: 1.0}, time);
+// }
 
 function startAnimation() {
 	var logo = $('#BMG-logo');
@@ -61,5 +61,5 @@ function introAnimation() {
 }
 
 $(function() {
-	introAnimation();
+	// introAnimation();
 });
