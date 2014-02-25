@@ -1,6 +1,10 @@
 # OSX Files
 *.DS_Store
 
+# Jade and less files (precompiled)
+*.jade
+*.less
+
 # Jekyll folders and files
 .ruby-version
 _site
