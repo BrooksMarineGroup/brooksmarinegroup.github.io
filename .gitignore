@@ -2,8 +2,8 @@
 *.DS_Store
 
 # Jade and less files (precompiled)
-*.jade
-*.less
+# *.jade
+# *.less
 
 # Jekyll folders and files
 .ruby-version
